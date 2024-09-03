@@ -2,6 +2,7 @@ package ex02;
 import  java.util.Scanner;
 
 public class SequenciaFibonacci {
+
     public static void main(String[] args) {
         java.util.Scanner sc = new Scanner(System.in);
         int     number, next, a = 0, b = 1;
@@ -31,4 +32,5 @@ public class SequenciaFibonacci {
 
         sc.close();
     }
+
 }

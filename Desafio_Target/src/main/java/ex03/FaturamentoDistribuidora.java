@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 public class FaturamentoDistribuidora {
+
     public static void main(String[] args) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
@@ -52,4 +53,5 @@ public class FaturamentoDistribuidora {
             e.printStackTrace();
         }
     }
+
 }
