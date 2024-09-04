@@ -12,7 +12,7 @@ public class FaturamentoDistribuidora {
     public static void main(String[] args) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\yurif\\OneDrive\\Área de Trabalho\\Projetos\\Desafio_Target\\src\\main\\java\\ex03\\faturamento.json"));
+            JsonNode rootNode = objectMapper.readTree(new File("C:\\Users\\yurif\\OneDrive\\Área de Trabalho\\Projetos\\Desafio_Target\\Desafio_Target\\src\\main\\java\\ex03\\dados.json"));
 
             double menorFaturamento = Double.MAX_VALUE;
             double maiorFaturamento = Double.MIN_VALUE;
@@ -22,7 +22,7 @@ public class FaturamentoDistribuidora {
             Iterator<JsonNode> elements = rootNode.elements();
             while (elements.hasNext()) {
                 JsonNode node = elements.next();
-                double faturamentoDiario = node.get("faturamento").asDouble();
+                double faturamentoDiario = node.get("valor").asDouble();
 
                 if (faturamentoDiario > 0) {
                     if (faturamentoDiario < menorFaturamento)
@@ -40,7 +40,7 @@ public class FaturamentoDistribuidora {
             elements = rootNode.elements();
             while (elements.hasNext()) {
                 JsonNode node = elements.next();
-                double faturamentoDiario = node.get("faturamento").asDouble();
+                double faturamentoDiario = node.get("valor").asDouble();
                 if (faturamentoDiario > mediaMensal)
                     diasAcimaDaMedia++;
             }
